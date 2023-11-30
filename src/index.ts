@@ -2,7 +2,7 @@
 import dotenv from "dotenv";
 dotenv.config();
 
-import express from "express";
+import express, { Request, Response } from "express";
 import bodyParser from "body-parser";
 import cookieParser from "cookie-parser";
 import cors from "cors";
@@ -26,6 +26,10 @@ app.use(
 app.use(cookieParser());
 // app.use(morgan());
 app.use(bodyParser.json());
+
+app.get("/", (req: Request, res: Response) => {
+  res.status(200).json({ message: "API is up" });
+});
 
 app.listen(8080, () => {
   console.log("Server Running!");
