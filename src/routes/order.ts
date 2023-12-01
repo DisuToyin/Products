@@ -2,13 +2,7 @@ import express from "express";
 
 import { auth } from "../middlewares/auth";
 import { validate_request } from "../middlewares/request_validator";
-import {
-  create_order,
-  get_orders,
-  //   get_all_user_order,
-  //   update_order,
-  //   delete_order,
-} from "../controllers/order";
+import { create_order, get_orders } from "../controllers/order";
 
 import { order_validation_rules } from "../rules/order";
 
