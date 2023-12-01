@@ -5,7 +5,9 @@
     "baseUrl": "src",
     "outDir": "dist",
     "sourceMap": true,
-    "noImplicitAny": true
+    "noImplicitAny": true,
+    "types": ["dotenv/config", "jest"],
+    "esModuleInterop": true
   },
   "include": ["src/**/*"]
 }

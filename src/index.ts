@@ -28,7 +28,13 @@ app.use(cookieParser());
 app.use(bodyParser.json());
 
 app.get("/", (req: Request, res: Response) => {
-  res.status(200).json({ message: "API is up" });
+  res
+    .status(200)
+    .json({
+      message: "API is up",
+      documentation:
+        "https://documenter.getpostman.com/view/19713765/2s9YeHbBCV",
+    });
 });
 
 app.listen(8080, () => {
