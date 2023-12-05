@@ -8,7 +8,7 @@ import { User } from "../models/user";
 import { CustomRequest } from "../types";
 
 // secret var
-const ACCESS_TOKEN_SECRET = "suywghb748urhuhgw9";
+const ACCESS_TOKEN_SECRET = process.env.ACCESS_TOKEN_SECRET;
 const MESSAGE = "Not Authorised";
 const ERROR = "Request not authenticated";
 
